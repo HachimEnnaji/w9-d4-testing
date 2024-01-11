@@ -16,3 +16,9 @@ describe("esiste il welcome?", () => {
     expect(bookCards).toHaveLength(fantasy.length);
   });
 });
+
+it("Comment Area is mounted?", () => {
+  render(<App />);
+  const commentArea = screen.getByTestId("comment-area");
+  expect(commentArea).toBeInTheDocument();
+});
